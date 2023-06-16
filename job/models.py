@@ -13,7 +13,7 @@ class Categroy(models.Model):
     
     
     
-class job(models.Model):
+class Job(models.Model):
     title= models.CharField(max_length=100)
     #location= models
     job_type= models.CharField(max_length=15 ,choices=JOB_TYPE)
