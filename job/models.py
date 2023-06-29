@@ -12,7 +12,10 @@ class Categroy(models.Model):
     
     def __str__(self):
         return self.name
-    
+    class Meta:
+        ordering = ['name']
+
+   
 # def image_upload (instance,filename):
 #      imagename , extension = filename.split(".")
 #      return "imagejobs/%s.%s"%(isinstance.id,extension)
@@ -36,3 +39,5 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+    class Meta:
+        ordering = ['title']
