@@ -41,11 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     # My Apps
-    'blog',
     'bootstrap4',
+    'blog',
     'job',
     'home',
- 
+    'contact',
+  
 ]
 
 MIDDLEWARE = [
