@@ -17,10 +17,10 @@ class Categroy(models.Model):
 #      imagename , extension = filename.split(".")
 #      return "imagejobs/%s.%s"%(isinstance.id,extension)
      
-# def image_upload(instance, filename):
-#     imagename, extension = filename.split(".")
-#     new_filename = imagename + str(uuid.uuid4())[:8] + "." + extension
-#     return os.path.join("images/", new_filename)
+def image_upload(instance, filename):
+    imagename, extension = filename.split(".")
+    new_filename = imagename + str(uuid.uuid4())[:8] + "." + extension
+    return os.path.join("images/", new_filename)
    
 class Job(models.Model):
     title= models.CharField(max_length=100)
