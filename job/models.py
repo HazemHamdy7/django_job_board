@@ -1,3 +1,5 @@
+import os
+import uuid
 from django.db import models
 
 JOB_TYPE = (
@@ -11,8 +13,15 @@ class Categroy(models.Model):
     def __str__(self):
         return self.name
     
-    
-    
+# def image_upload (instance,filename):
+#      imagename , extension = filename.split(".")
+#      return "imagejobs/%s.%s"%(isinstance.id,extension)
+     
+# def image_upload(instance, filename):
+#     imagename, extension = filename.split(".")
+#     new_filename = imagename + str(uuid.uuid4())[:8] + "." + extension
+#     return os.path.join("images/", new_filename)
+   
 class Job(models.Model):
     title= models.CharField(max_length=100)
     #location= models
@@ -23,6 +32,7 @@ class Job(models.Model):
     salary = models.IntegerField(default=0)
     experience = models.IntegerField(default=1)
     categroy = models.ForeignKey(Categroy,on_delete=models.CASCADE)
-    
+    image=models.ImageField(upload_to="image_jobs")
+
     def __str__(self):
         return self.title
