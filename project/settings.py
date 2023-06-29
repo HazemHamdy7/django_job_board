@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'django_forms_bootstrap',
+    # My Apps
     'blog',
-    'contact',
+    'bootstrap4',
     'job',
     'home',
  
@@ -127,6 +128,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    # os.path.join(BASE_DIR / "static"),
     "/var/www/static/",
 ]
 MEDIA_URL = 'media/'
